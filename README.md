@@ -4,7 +4,7 @@ SpamBot Instagram [Python] for Google Chrome
 
 ## Installation
 
-Download [chromedriver] for your browser https://chromedriver.storage.googleapis.com/index.html?path=89.0.4389.23/
+Download [chromedriver](https://chromedriver.storage.googleapis.com/index.html?path=89.0.4389.23/) for your browser.
 
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install InSpam.
 
