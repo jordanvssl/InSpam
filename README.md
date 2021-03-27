@@ -1,6 +1,6 @@
 # InSpam
 
-SpamBot for Instagram [Python] for Google Chrome
+SpamBot Instagram [Python] for Google Chrome
 
 ## Installation
 
