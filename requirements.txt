@@ -1,0 +1,5 @@
+art==5.1
+colored==1.4.2
+selenium==3.141.0
+termcolor==1.1.0
+getpass
