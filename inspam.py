@@ -5,8 +5,12 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from colored import fg, bg, attr
 
+
+
 #Var
 copy = "https://github.com/jordanvssl/InSpam "
+options = webdriver.ChromeOptions()
+options.add_experimental_option('excludeSwitches', ['enable-logging'])
 warn = "%s%sPlease turn off 2FA on your Instagram account !!!  %s" % (
     fg("black"),
     bg("red"),
@@ -47,7 +51,7 @@ print("Please do not close the window")
 time.sleep(5)
 
 # Get
-driver = webdriver.Chrome(chromedriver)
+driver = webdriver.Chrome(chromedriver, options=options)
 driver.get("http://www.instagram.com")
 
 time.sleep(delay)
@@ -67,7 +71,10 @@ except:
 time.sleep(delay)
 driver.find_element_by_class_name("L3NKy").click()
 time.sleep(delay)
-driver.find_element_by_class_name("M5V28").send_keys(target)
+try:
+	driver.find_element_by_class_name("M5V28").send_keys(target)
+except:
+	print('error, please restart...')
 time.sleep(2)
 driver.find_element_by_class_name("dCJp8").click()
 time.sleep(2)
@@ -80,7 +87,7 @@ while loop < messageNb:
     textarea = driver.find_element_by_xpath("//textarea")
     textarea.send_keys(SpamText)
     textarea.send_keys(Keys.RETURN)
-driver.close()
 print(space)
 print("Success")
+driver.close()
 exit()
