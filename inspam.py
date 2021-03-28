@@ -5,8 +5,6 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from colored import fg, bg, attr
 
-
-
 #Var
 copy = "https://github.com/jordanvssl/InSpam "
 options = webdriver.ChromeOptions()
